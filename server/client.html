@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+<div id="msg">
+for msg
+</div>
+<input type="text" id="t" />
+<button onClick="bclick()">click me</button>
+
+<script>
+// client at 11102
+
+
+function bclick() {
+    var txt = document.getElementById('t').value;
+    var ws = new WebSocket('ws://localhost:11102');
+
+    ws.onopen = (e) =>  {
+        console.log(e);
+        ws.send('msg from page: ' + txt);
+    }
+    ws.onerror = (e) =>  console.log(e);
+
+}
+
+</script>
+</body>
+</html>
+

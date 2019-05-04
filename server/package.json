@@ -1,0 +1,16 @@
+{
+  "name": "server-for-ce",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "server.js",
+  "scripts": {
+    "test": "server-test"
+  },
+  "author": "addewyd",
+  "license": "ISC",
+  "dependencies": {
+    "http": "0.0.0",
+    "url": "^0.11.0",
+    "ws": "^7.0.0"
+  }
+}
